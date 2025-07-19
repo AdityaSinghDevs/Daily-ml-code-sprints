@@ -1,5 +1,8 @@
-from logger import get_logger
+from colored_logger import setup_logger
 
-logger = get_logger("training" , "logs.log")
+logger = setup_logger("training" , "logs.log")
 
 logger.info("helpp")
+logger.warning("helpp")
+logger.error("helpp")
+logger.critical("helpp")
