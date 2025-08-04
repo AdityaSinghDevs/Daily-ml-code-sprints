@@ -43,7 +43,7 @@ def data_loader(file_path : str , req_col : None , drop_na = True):
 
    
 
-#THIS MIGHT BE THE SHITTIEST CODE I HAVE WRITTEN IN A WHILE, NEED TO WORK A LOT OMN FLOWS    
+#THIS MIGHT BE THE SHITTIEST CODE I HAVE WRITTEN IN A WHILE, NEED TO WORK A LOT ON FLOWS    
        
 
 

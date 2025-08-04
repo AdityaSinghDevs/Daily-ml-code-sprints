@@ -18,8 +18,10 @@ def data_loader(file_path:str, req_col: Optional[List[str]] = None , drop_na : b
     extension = os.path.splitext(file_path)[1].lower()
     if extension == ".csv":
         df= pd.read_csv(file_path)
+        logger.info(f"CSV file found : {file_path}")
     elif extension == ".xlsx":
         df= pd.read_excel(file_path)
+        logger.info(f"Excel file found : {file_path}")
     else:
         logger.error(f"Unsupported file format : {extension}")
         raise ValueError(f"Unsupported file format : {extension}")
@@ -32,6 +34,7 @@ def data_loader(file_path:str, req_col: Optional[List[str]] = None , drop_na : b
     if drop_na:
         if req_col:
             df = df.dropna(subset = req_col)
+            
         else:
             df = df.dropna()    
 
